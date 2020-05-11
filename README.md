@@ -129,6 +129,7 @@ and set ```cog_bare_default=True```. This sets the ```--bare``` parameter as def
 # --bare at the end prevents creation of unittests folder, controller/model and converter
 create-discord-bot createcog cat
 create-discord-bot createcog fish --bare
+create-discord-bot createcog dog --tests
 ```
 
 If you do not want to create the unittests in a full setup you can use ```--tests``` to prevent the creation of the test
