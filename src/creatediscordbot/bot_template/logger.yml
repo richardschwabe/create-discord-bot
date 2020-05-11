@@ -1,0 +1,26 @@
+version: 1
+formatters:
+  default:
+    format: "%(asctime)s %(levelname)-8s %(name)-15s %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+  simple:
+    format: "%(name)s - %(levelname)s - %(message)s"
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+    stream: ext://sys.stdout
+  file:
+    class: logging.handlers.TimedRotatingFileHandler
+    formatter: default
+    filename: logs/discord.log
+    when: "midnight"
+loggers:
+  discord:
+    level: DEBUG
+    handlers: [file]
+    propagate: no
+root:
+  level: DEBUG
+  handlers: [console]

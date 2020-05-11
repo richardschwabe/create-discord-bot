@@ -1,0 +1,10 @@
+FROM python:3.8.2
+
+WORKDIR /usr/src/app
+
+COPY ./$REPLACE_BOT_FOLDER_NAME/requirements.txt ./
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY ./$REPLACE_BOT_FOLDER_NAME/ .
+

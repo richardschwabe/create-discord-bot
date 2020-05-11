@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  discord_bot:
+    container_name: "db_$REPLACE_BOT_NAME"
+    build:
+      context: .
+      dockerfile: ./$REPLACE_BOT_NAME/Dockerfile
+    env_file: ./$REPLACE_BOT_NAME/.env
+    entrypoint: ["python", "main.py"]
+    volumes:
+      - ./logs:/usr/src/app/logs

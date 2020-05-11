@@ -1,0 +1,22 @@
+# This is your Cog
+import discord
+from discord.ext import commands
+
+
+class $REPLACE_COG_CLASS_NAME(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+
+    @commands.command()
+    async def $REPLACE_METHOD_NAME(self, ctx):
+        """
+        Brief - Not yet implemented
+
+        Long Description
+        """
+
+        await ctx.send("bar")
+
+
+def setup(bot):
+    bot.add_cog($REPLACE_COG_CLASS_NAME(bot))
