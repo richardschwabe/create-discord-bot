@@ -5,6 +5,10 @@ import logging.config
 from pathlib import Path
 
 global_settings_file_path = Path(__file__)
+
+# Set DEBUG
+DEBUG = bool(os.getenv("DEBUG", False))
+
 # Define Folder where settings are located
 SETTINGS_DIR = global_settings_file_path.parent
 
@@ -35,6 +39,10 @@ DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 
 # Logging
-with open(ROOT_DIR / "logger.yml", "rt") as file:
+logfile = "logger.prod.yml"
+if DEBUG:
+    logfile = "logger.yml"
+
+with open(ROOT_DIR / logfile, "rt") as file:
     config = yaml.safe_load(file.read())
     logging.config.dictConfig(config)

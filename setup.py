@@ -20,7 +20,7 @@ print(extra_files)
 
 setup(name='create-discord-bot',
       version='0.8',
-      url='https://github.com/StartupTechTutorial/DiscordBot',
+      url='https://github.com/StartupTechTutorial/create-discord-bot',
       license='GNU 3.0',
       author='StartupTechTutorials',
       author_email='hello@startuptechtutorials.com',
@@ -34,7 +34,7 @@ setup(name='create-discord-bot',
       entry_points={
           'console_scripts': ['create-discord-bot=creatediscordbot:main']
       },
-      python_requires='>=3.5, <4',
+      python_requires='>=3.6, <4',
       install_requires=[
           'colorama>=0.4.3'
       ],

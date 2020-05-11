@@ -6,11 +6,11 @@ formatters:
   simple:
     format: "%(name)s - %(levelname)s - %(message)s"
 handlers:
-  console:
-    class: logging.StreamHandler
-    level: DEBUG
-    formatter: simple
-    stream: ext://sys.stdout
+  general:
+    class: logging.handlers.TimedRotatingFileHandler
+    formatter: default
+    filename: logs/bot.log
+    when: "midnight"
   discord:
     class: logging.handlers.TimedRotatingFileHandler
     formatter: default
@@ -18,9 +18,9 @@ handlers:
     when: "midnight"
 loggers:
   discord:
-    level: DEBUG
+    level: WARN
     handlers: [discord]
     propagate: no
 root:
-  level: DEBUG
-  handlers: [console]
+  level: WARN
+  handlers: [general]
