@@ -48,6 +48,7 @@ def print_help():
     print("[-] createcommand <command_name> : Creates a new command in the uncategorised commands folder")
     print("[-] createcog <CogName> [--bare] : Creates a new Cog")
     print("[-] - [--bare] : Does not create modle/controller/converter and test files")
+    print("[-] - [--tests] : Does not create test files")
     print("[-] --help : Shows this help")
     print("[-] -h : Shortform for --help")
 
