@@ -24,7 +24,7 @@ setup(name='create-discord-bot',
       license='GNU 3.0',
       author='StartupTechTutorials',
       author_email='hello@startuptechtutorials.com',
-      description='Simple ',
+      description=open('README.md').read(),
       package_data={
           'creatediscordbot': extra_files
       },
