@@ -40,7 +40,7 @@ the official documentation. This is only required, if you want your bot to use v
 
 Install the package globally
 ```
-pip install creatediscordbot
+pip install create-discord-bot
 ```
 
 Install the package in a virtual environment
