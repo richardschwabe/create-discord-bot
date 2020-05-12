@@ -99,14 +99,28 @@ Replace ```animals``` with your actual bot name
 └── .creatediscordbot.conf
 ```
 
-5.Supply your Discord Bot Token to the ```.env.debug``` file via ```DISCORD_BOT_TOKEN=``` 
+5.Create a ```.env.debug``` file in the botfolder ```animals``` and paste the following code in:
+```
+DISCORD_BOT_TOKEN=
 
-6.Install the requirements via pip:
+
+DB_HOST_NAME=
+DB_DATABASE_NAME=
+DB_USER=
+DB_PASSWORD=
+```
+
+(*Note: for production just call the file ```.env``` - Both are specified in .gitignore and 
+will not be committed to the repository you are using*)
+
+6.Supply your Discord Bot Token to the ```.env.debug``` file via ```DISCORD_BOT_TOKEN=``` 
+
+7.Install the requirements via pip:
 ```
 pip install -r animals/requirements.txt
 ```
 
-7.Run the following command: ```DEBUG=True python animals/main.py``` to start your bot
+8.Run the following command: ```DEBUG=True python animals/main.py``` to start your bot
 
 
 ## Requirements:
