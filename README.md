@@ -43,6 +43,13 @@ Install the package globally
 pip install creatediscordbot
 ```
 
+Install the package in a virtual environment
+```
+virtualenv .venv
+. .venv/bin/activate
+pip install creatediscordbot
+```
+
 ## Instructions to setup demo project
 1. Create a new project folder
 2. Create a virtual environment folder in there (highly recommended!)
@@ -94,7 +101,12 @@ Replace ```animals``` with your actual bot name
 
 5.Supply your Discord Bot Token to the ```.env.debug``` file via ```DISCORD_BOT_TOKEN=``` 
 
-6.Run the following command: ```DEBUG=True python animals/main.py``` to start your bot
+6.Install the requirements via pip:
+```
+pip install -r animals/requirements.txt
+```
+
+7.Run the following command: ```DEBUG=True python animals/main.py``` to start your bot
 
 
 ## Requirements:
@@ -116,6 +128,26 @@ create-discord-bot createbot animals
 ```
 
 Creates a new bot project with the project structure seen in the instructions section.
+
+The discordpy bot will have the following requirements:
+```
+aiohttp==3.6.2
+async-timeout==3.0.1
+attrs==19.3.0
+chardet==3.0.4
+discord.py==1.3.3
+idna==2.9
+multidict==4.7.5
+python-dotenv==0.13.0
+websockets==8.1
+yarl==1.4.2
+PyYAML==5.3.1
+```
+
+You will find them in the requirements.txt that is generated with the project. You should then install them via pip:
+```
+pip install -r botfolder/requirements.txt
+```
 
 ### Create new Cog
 To create a new cog module for the bot you can use ```createcog <cogname>```. By default this creates a new Cog with 
