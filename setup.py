@@ -24,13 +24,14 @@ setup(name='create-discord-bot',
       license='GNU 3.0',
       author='StartupTechTutorials',
       author_email='hello@startuptechtutorials.com',
-      description=open('README.md').read(),
+      description="Simply create a new discordpy discord bot with a predefined structure and helpers to create Cogs, Commands,",
+      long_description=open('README.md').read(),
+      long_description_content_type="text/markdown",
       package_data={
           'creatediscordbot': extra_files
       },
       package_dir={'': 'src'},
       packages=find_packages(where='src'),
-      long_description=open('README.md').read(),
       entry_points={
           'console_scripts': ['create-discord-bot=creatediscordbot:main']
       },
