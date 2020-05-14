@@ -19,7 +19,7 @@ extra_files += package_files('src/creatediscordbot/cog_template')
 print(extra_files)
 
 setup(name='create-discord-bot',
-      version='0.9',
+      version='0.10',
       url='https://github.com/StartupTechTutorial/create-discord-bot',
       license='GNU 3.0',
       author='StartupTechTutorials',

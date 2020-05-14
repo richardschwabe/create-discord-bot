@@ -27,11 +27,11 @@ class Admin(commands.Cog):
         cog = f'{COGS_FOLDER.name}.{cog}.{cog}'
         logger.debug(f"Loading Cog: {cog}")
         try:
-            self.bot.unload_extension(cog)
+            self.bot.load_extension(cog)
         except Exception as e:
-            await ctx.send("Could not unload cog")
+            await ctx.send("Could not load cog")
             return
-        await ctx.send("Cog unloaded")
+        await ctx.send("Cog loaded")
 
     @commands.command()
     @commands.is_owner()
@@ -44,11 +44,11 @@ class Admin(commands.Cog):
         cog = f'{COGS_FOLDER.name}.{cog}.{cog}'
         logger.debug(f"Unloading Cog: {cog}")
         try:
-            self.bot.load_extension(cog)
+            self.bot.unload_extension(cog)
         except Exception as e:
-            await ctx.send("Could not load cog")
+            await ctx.send("Could not unload cog")
             return
-        await ctx.send("Cog loaded")
+        await ctx.send("Cog unloaded")
 
     @commands.command()
     @commands.is_owner()
